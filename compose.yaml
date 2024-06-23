@@ -1,7 +1,7 @@
 services:
   btcd:
     image: vbphung/btcd:latest
-    container_name: xoi-btcd
+    container_name: btcd
     volumes:
       - ./btcd.conf:/root/.btcd/btcd.conf:ro
       - btcd:/root/.btcd:rw
