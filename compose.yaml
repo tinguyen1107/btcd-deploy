@@ -1,0 +1,12 @@
+services:
+  btcd:
+    image: vbphung/btcd:latest
+    container_name: xoi-btcd
+    volumes:
+      - ./btcd.conf:/root/.btcd/btcd.conf:ro
+      - btcd:/root/.btcd:rw
+    network_mode: host
+    entrypoint: /bin/linux_arm64/btcd
+
+volumes:
+  btcd:
